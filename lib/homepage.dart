@@ -6,28 +6,27 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: const Text("CPSU Project",
-                style: TextStyle(
-                    color: Colors.white, fontSize: 28, letterSpacing: 2)),
-            backgroundColor: Colors.redAccent,
-            centerTitle: true),
-        backgroundColor: Colors.white60,
-        body: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Container(
-                  padding: const EdgeInsets.all(15),
-                  color: Colors.blueAccent,
-                  child: const Text("Hello World1")),
-              Container(
-                  padding: const EdgeInsets.all(15),
-                  color: Colors.blueAccent,
-                  child: const Text("Hello World2")),
-              Container(
-                  padding: const EdgeInsets.all(15),
-                  color: Colors.blueAccent,
-                  child: const Text("Hello World3")),
-            ]));
+          title: Text('Simple Layout'),
+        ), //AppBar
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Hello World!'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.star, color: Colors.black, size: 30),
+                SizedBox(width: 10),
+                Icon(Icons.favorite, color: Colors.black, size: 30),
+              ],
+            ), //Row
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Press Me'),
+            ), // ElevatedButton
+          ],
+        ) //Column
+        ); // Scaffold
   }
 }
